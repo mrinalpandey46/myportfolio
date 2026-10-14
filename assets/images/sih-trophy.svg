@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="trophyGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff275" />
+      <stop offset="45%" stop-color="#ffb703" />
+      <stop offset="100%" stop-color="#fb8500" />
+    </linearGradient>
+    <linearGradient id="cyberCyanTrophy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#0066cc" />
+    </linearGradient>
+    <linearGradient id="pedestalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Golden Glow behind Trophy -->
+  <circle cx="200" cy="190" r="130" fill="rgba(255, 183, 3, 0.15)" filter="url(#goldGlow)" />
+  <circle cx="200" cy="190" r="90" fill="rgba(0, 240, 255, 0.1)" filter="url(#goldGlow)" />
+
+  <!-- Orbiting Cyber Particles & Rings -->
+  <ellipse cx="200" cy="180" rx="140" ry="40" fill="none" stroke="rgba(0, 240, 255, 0.4)" stroke-width="1.5" stroke-dasharray="6 8" transform="rotate(-15 200 180)" />
+  <ellipse cx="200" cy="180" rx="150" ry="45" fill="none" stroke="rgba(255, 183, 3, 0.3)" stroke-width="1.5" stroke-dasharray="10 12" transform="rotate(18 200 180)" />
+
+  <!-- Star Sparkles -->
+  <polygon points="200,40 205,55 220,60 205,65 200,80 195,65 180,60 195,55" fill="#fff275" filter="url(#goldGlow)"/>
+  <polygon points="100,120 103,130 113,133 103,136 100,146 97,136 87,133 97,130" fill="#00f0ff" opacity="0.8"/>
+  <polygon points="300,110 303,120 313,123 303,126 300,136 297,126 287,123 297,120" fill="#ffb703" opacity="0.8"/>
+
+  <!-- Trophy Cup Body -->
+  <g id="trophy-cup">
+    <!-- Left Handle -->
+    <path d="M 140 120 C 70 120, 70 210, 145 220" fill="none" stroke="url(#trophyGold)" stroke-width="12" stroke-linecap="round" filter="url(#goldGlow)"/>
+    <path d="M 140 125 C 85 125, 85 205, 145 215" fill="none" stroke="#00f0ff" stroke-width="2"/>
+
+    <!-- Right Handle -->
+    <path d="M 260 120 C 330 120, 330 210, 255 220" fill="none" stroke="url(#trophyGold)" stroke-width="12" stroke-linecap="round" filter="url(#goldGlow)"/>
+    <path d="M 260 125 C 315 125, 315 205, 255 215" fill="none" stroke="#00f0ff" stroke-width="2"/>
+
+    <!-- Main Cup Calyx -->
+    <path d="M 130 100 L 270 100 C 270 180, 240 250, 200 250 C 160 250, 130 180, 130 100 Z" fill="url(#trophyGold)" filter="url(#goldGlow)"/>
+    
+    <!-- Cup Rim Top -->
+    <ellipse cx="200" cy="100" rx="70" ry="16" fill="#fff59d" stroke="#ff9800" stroke-width="3"/>
+    <ellipse cx="200" cy="100" rx="58" ry="10" fill="#d97706"/>
+
+    <!-- Cup Highlight Sheen -->
+    <path d="M 155 110 C 150 160, 170 230, 185 242 C 172 230, 160 160, 165 110 Z" fill="rgba(255, 255, 255, 0.45)"/>
+
+    <!-- Cup Stem / Base Connector -->
+    <path d="M 188 250 L 212 250 L 216 295 L 184 295 Z" fill="url(#trophyGold)"/>
+    <ellipse cx="200" cy="295" rx="35" ry="8" fill="#fb8500"/>
+  </g>
+
+  <!-- Pedestal Base -->
+  <g id="trophy-pedestal" transform="translate(200, 310)">
+    <!-- Upper Block -->
+    <polygon points="-55,0 55,0 70,25 -70,25" fill="#1e293b" stroke="url(#cyberCyanTrophy)" stroke-width="2"/>
+    
+    <!-- Main Block -->
+    <rect x="-85" y="25" width="170" height="75" rx="6" fill="url(#pedestalGrad)" stroke="rgba(255, 183, 3, 0.4)" stroke-width="1.5"/>
+
+    <!-- Neon Plaque Display -->
+    <rect x="-70" y="35" width="140" height="55" rx="4" fill="#080c16" stroke="url(#trophyGold)" stroke-width="1.5" />
+
+    <text x="0" y="55" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="14" fill="#ffb703" letter-spacing="1">SIH PRELIMS</text>
+    <text x="0" y="73" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="11" fill="#00f0ff" letter-spacing="2">TOP 15 TEAMS</text>
+
+    <!-- Base Footing -->
+    <polygon points="-100,100 100,100 90,112 -90,112" fill="#0c1220" stroke="rgba(0, 240, 255, 0.3)" stroke-width="1"/>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+/* ==========================================================================
+   MRINAL PANDEY - BOTPRESS AI ASSISTANT STYLING
+   Futuristic floating chat widget theme matching the portfolio aesthetic
+   ========================================================================== */
+
+/* Adjust Toast container so it stacks neatly above the chat bubble */
+.toast-container {
+  bottom: 100px !important;
+  right: 24px !important;
+  z-index: 99999 !important;
+}
+
+/* Botpress Floating Widget Custom Theme Wrapper (v2 & v3 compatibility) */
+#bp-web-widget-container,
+#webchat,
+.bpw-widget-btn,
+.bpw-floating-button,
+[class*="bp-widget"],
+iframe[id*="bp-webchat"],
+iframe[src*="botpress"] {
+  z-index: 99990 !important;
+}
+
+/* Subtle futuristic neon glow around Botpress widget launcher & container */
+div[class*="bpw-widget-btn"],
+button[class*="bpw-widget-btn"],
+[class*="bp-widget-btn"],
+[class*="bp-floating-button"],
+#bp-web-widget-container iframe,
+iframe[id*="bp-webchat"],
+iframe[src*="botpress"] {
+  filter: drop-shadow(0 0 16px rgba(0, 240, 255, 0.4));
+  transition: filter 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+div[class*="bpw-widget-btn"]:hover,
+button[class*="bpw-widget-btn"]:hover,
+[class*="bp-widget-btn"]:hover,
+[class*="bp-floating-button"]:hover {
+  filter: drop-shadow(0 0 24px rgba(0, 240, 255, 0.7)) drop-shadow(0 0 12px rgba(168, 85, 247, 0.5));
+  transform: scale(1.05);
+}
+
+/* Mobile responsive constraints */
+@media (max-width: 640px) {
+  .toast-container {
+    bottom: 95px !important;
+    right: 16px !important;
+    left: 16px !important;
+  }
+}
